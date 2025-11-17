@@ -1,116 +1,55 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-                             https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>in.reyaz</groupId>
+	<artifactId>myapp</artifactId>
+	<packaging>war</packaging>
+	<version>8.3.3-SNAPSHOT</version>
+	<name>myapp</name>
+	<url>http://maven.apache.org</url>
+	 <properties>
+     <maven.compiler.source>1.8</maven.compiler.source>
+     <maven.compiler.target>1.8</maven.compiler.target>
+</properties>
 
-  <modelVersion>4.0.0</modelVersion>
+	<dependencies>
+		<dependency>
+		    <groupId>com.oracle.bedrock</groupId>
+		    <artifactId>bedrock-runtime-maven</artifactId>
+		    <version>5.1.2</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
 
-  <groupId>in.sujal</groupId>
-  <artifactId>myapp</artifactId>
-  <version>8.3.3-SNAPSHOT</version>
-  <packaging>war</packaging>
-  <name>myapp</name>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <java.release>21</java.release>
-
-    <!-- Plugin versions (updated) -->
-    <maven.compiler.plugin.version>3.14.1</maven.compiler.plugin.version>
-    <maven.war.plugin.version>3.5.0</maven.war.plugin.version>
-    <maven.surefire.plugin.version>3.5.4</maven.surefire.plugin.version>
-    <sonar.maven.plugin.version>5.2.0.4988</sonar.maven.plugin.version>
-    <maven.enforcer.plugin.version>3.2.0</maven.enforcer.plugin.version>
-  </properties>
-
-  <dependencies>
-
-    <!-- Bedrock updated -->
-    <dependency>
-      <groupId>com.oracle.bedrock</groupId>
-      <artifactId>bedrock-runtime-maven</artifactId>
-      <version>7.0.6</version>
-    </dependency>
-
-    <!-- JUnit 5 (Latest Jupiter) -->
-    <dependency>
-      <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter</artifactId>
-      <version>5.10.4</version>
-      <scope>test</scope>
-    </dependency>
-
-  </dependencies>
-
+	</dependencies>
   <build>
     <finalName>myapp</finalName>
-
     <plugins>
-
-      <!-- Enforce Java 21 + Maven 3.9+ -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-enforcer-plugin</artifactId>
-        <version>${maven.enforcer.plugin.version}</version>
-        <executions>
-          <execution>
-            <id>enforce-java-maven</id>
-            <goals><goal>enforce</goal></goals>
-            <configuration>
-              <rules>
-                <requireMavenVersion>
-                  <version>[3.9,)</version>
-                </requireMavenVersion>
-                <requireJavaVersion>
-                  <version>[21,)</version>
-                </requireJavaVersion>
-              </rules>
-              <fail>true</fail>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-
-      <!-- Java compiler plugin -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>${maven.compiler.plugin.version}</version>
-        <configuration>
-          <release>${java.release}</release>
-        </configuration>
-      </plugin>
-
-      <!-- WAR plugin -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
-        <version>${maven.war.plugin.version}</version>
+        <version>3.3.1</version>
       </plugin>
-
-      <!-- JUnit 5 (Surefire plugin) -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>${maven.surefire.plugin.version}</version>
-      </plugin>
-
-      <!-- SonarQube -->
-      <plugin>
-        <groupId>org.sonarsource.scanner.maven</groupId>
-        <artifactId>sonar-maven-plugin</artifactId>
-        <version>${sonar.maven.plugin.version}</version>
-      </plugin>
-
+	    <plugin>
+    <groupId>org.codehaus.mojo</groupId>
+    <artifactId>sonar-maven-plugin</artifactId>
+    <version>3.0.2</version>
+</plugin>
     </plugins>
   </build>
+	
+	<pluginRepositories>
+	    <pluginRepository>    
+		<id>maven1</id>
+		<name>Maven.org</name>
+		<url>https://repo1.maven.org/maven2</url>
+	    </pluginRepository>
+	</pluginRepositories>
 
-  <pluginRepositories>
-    <pluginRepository>
-      <id>central</id>
-      <url>https://repo1.maven.org/maven2</url>
-    </pluginRepository>
-  </pluginRepositories>
-
+	
 </project>
