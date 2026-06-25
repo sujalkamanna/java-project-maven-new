@@ -91,7 +91,11 @@
                 <img src="./assets/img/poster 4.png" class="card-img" alt="">
                 <div class="card-body">
                     <h2 class="name">Avengers Endgame</h2>
+<<<<<<< HEAD
                     <h6 class="des">Shantanu ipsum dolor helo consectetur elit.</h6>
+=======
+                    <h6 class="des">Lorem ipsum dolor helo consectetur elit.</h6>
+>>>>>>> af1378f007d81496045d1b2967f48d3ccb6d005e
                     <button class="watchlist-btn">add to watchlist</button>
                 </div>
             </div>
@@ -107,7 +111,11 @@
                 <img src="./assets/img/poster 2.png" class="card-img" alt="">
                 <div class="card-body">
                     <h2 class="name">Mulan</h2>
+<<<<<<< HEAD
                     <h6 class="des">Himavathi Mulan dolor sit consectetur elit.</h6>
+=======
+                    <h6 class="des">Haha Mulan dolor sit consectetur elit.</h6>
+>>>>>>> af1378f007d81496045d1b2967f48d3ccb6d005e
                     <button class="watchlist-btn">add to watchlist</button>
                 </div>
             </div>
@@ -115,7 +123,11 @@
                 <img src="./assets/img/poster 1.png" class="card-img" alt="">
                 <div class="card-body">
                     <h2 class="name">Loki</h2>
+<<<<<<< HEAD
                     <h6 class="des">Lorem sri sit consectetur elit.</h6>
+=======
+                    <h6 class="des">Lorem shubham color sit consectetur elit.</h6>
+>>>>>>> af1378f007d81496045d1b2967f48d3ccb6d005e
                     <button class="watchlist-btn">add to watchlist</button>
                 </div>
             </div>
